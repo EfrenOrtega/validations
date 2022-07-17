@@ -136,7 +136,7 @@ function exists(dataAttribute, $input) {
     if (dataAttribute !== 'required') {
         dataAttribute.forEach(el => {
             typeValidations.forEach(obj => {
-                regExp = RegExp(`^${obj.name}$`, "gmi")
+                regExp = RegExp(`${obj.name}`, "gmi")
                 if (regExp.test(el)) {
                     obj.inputs.push($input)
                 }
@@ -245,7 +245,7 @@ const validar = (res, regExp, e, displaywarnings) => {
 
                     //Get other <input> with the same validations and apply 'em
                     typeValidations.forEach((obj) => {
-                        regExp = RegExp(`^${obj.name}$`, "gmi")
+                        regExp = RegExp(`${obj.name}`, "gmi")
                         if ((regExp.test(e.dataset.validation)) && (obj.name !== typeValidation)) {
                             res.push(obj.methodValidation(e, $warn, res[count], null, displaywarnings))
                             count++//To traverse the array res[] and get the previous result of the validation
