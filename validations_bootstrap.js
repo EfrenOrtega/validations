@@ -236,8 +236,8 @@ const validar = (res, regExp, e, displaywarnings) => {
             const $warn = document.querySelector(`.${e.name}`)//Get the <span> of the <input>
             let required = ((/required/gm).test(e.dataset.validation));//Verify if the <input> is required  
             try {
-                DATAVALIDATION.getPositionOfValidationType().forEach((position, interval) => {//Ejecutar cuantos tipos de validaciones tenga el input
-                    let methodValidation = typeValidations[position].methodValidation(e, $warn, null, required, displaywarnings)//Método cuando es la primera validación
+                DATAVALIDATION.getPositionOfValidationType().forEach((position, interval) => {//Execute according the amount of validation types have the <input>
+                    let methodValidation = typeValidations[position].methodValidation(e, $warn, null, required, displaywarnings)//Method when it's the first validation
                     let methodValidationWithpreviousStatus = typeValidations[position].methodValidation(e, $warn, res[count], required, displaywarnings)//Method when it's not the first validation of the input
                     let typeValidation = typeValidations[position].name;//Get the current type of validation
 
