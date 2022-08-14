@@ -4,6 +4,10 @@
 ## Description:
  - There are two scripts to validate any &lt;input> html but each one works with different Framework CSS (Bootstrap and Tailwind)
  - This script was created by me in a school project, here the repository: https://github.com/KevinJaramilloLievano/CINE_06_03.git \
+
+## Update 08/13/2022:
+ - Now, there is a new script to validate without any framework CSS called "validations_css.js" and you need to link "validation.css" in your html you can
+ find 'em inside the folder called "without framework" and there is an example as well.
  
 ## Types of Validations:
 1. only-words

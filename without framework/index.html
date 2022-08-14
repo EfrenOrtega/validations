@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./validations.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Validations Example</h1>
+    <form action="">
+        <label for="">Name:</label><br>
+        <input data-validation="required only-words" type="text" name="Name">
+        <br>
+
+        <label for="">Last:</label><br>
+        <input data-validation="required only-words" type="text" name="Last">
+        <br>
+
+        <label for="">Phone:</label><br>
+        <input data-validation="required only-numbers" type="text" name="Phone">
+        <br>
+
+        <div data-warn></div>
+
+    </form>
+
+    <script src="./index.js" type="module"></script>
+</body>
+</html>
